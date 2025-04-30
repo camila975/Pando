@@ -1,0 +1,67 @@
+body {
+    background-color: lch(97.85% 2.66 305.56);
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+  
+  h1 {
+    color: #1b1514;
+    margin-top: 40px;
+  }
+  
+  .gallery {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+  }
+  
+  /* Transición con cambio de tamaño y delay */
+  .img1 {
+    width: 150px;
+    height: auto;
+    transition: all 2s ease-in-out 0.5s;
+  }
+  
+  .img1:hover {
+    width: 200px;
+    transform: rotate(10deg);
+  }
+  
+  /* Transición con cubic-bezier y tamaño infinito */
+  .img2 {
+    width: 150px;
+    transition: all 3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  }
+  
+  .img2:hover {
+    width: 250px;
+    height: auto;
+  }
+  
+  /* Animación de cambio de forma (border-radius) */
+  .img3 {
+    width: 150px;
+    animation: cambiarForma 4s ease-in-out infinite;
+  }
+  
+  @keyframes cambiarForma {
+    0% { border-radius: 0%; }
+    50% { border-radius: 50%; }
+    100% { border-radius: 0%; }
+  }
+  
+  /* Animación con cambio de color y dirección inversa */
+  .img4 {
+    width: 150px;
+    animation: cambiarColor 3s linear infinite reverse;
+    animation-iteration-count: 3;
+  }
+  
+  @keyframes cambiarColor {
+    0% { filter: hue-rotate(0deg); }
+    50% { filter: hue-rotate(180deg); }
+    100% { filter: hue-rotate(360deg); }
+  }
+  
